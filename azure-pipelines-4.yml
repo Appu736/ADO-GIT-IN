@@ -11,7 +11,7 @@ steps:
     git pull https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/https://Kyndryl-Sandbox@dev.azure.com/Kyndryl-Sandbox/ADO%20TESTING/_git/ADO%20TESTING
 git push -u ADO TESTING --all master
     git push -u https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/https://Kyndryl-Sandbox@dev.azure.com/Kyndryl-Sandbox/ADO%20TESTING/_git/ADO%20TESTING
-git push -u  --all HEAD:master
+git push -u ADO TESTING --all HEAD:master
   displayName: 'Sync changes with Azure DevOps'
 
 - task: UsePythonVersion@0
