@@ -1,0 +1,29 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    git config --global user.email "Shailendra.Bilar@kyndryl.com"
+    git config --global user.name "Shailendra Bilar"
+    git pull https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/https://Kyndryl-Sandbox@dev.azure.com/Kyndryl-Sandbox/ADO%20TESTING/_git/ADO%20TESTING%201
+    git push -u https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/https://Kyndryl-Sandbox@dev.azure.com/Kyndryl-Sandbox/ADO%20TESTING/_git/ADO%20TESTING%201
+  displayName: 'Sync changes with Azure DevOps'
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    git config --global user.email "Shailendra.Bilar@kyndryl.com"
+    git config --global user.name "Appu736"
+    git fetch ADO-GIT-IN
+    git merge ADO-GIT-IN/main --no-edit
+    git push -u ADO-GIT-IN HEAD:main
+  displayName: 'Sync changes with GitHub'
+  env:
+    GITHUB_TOKEN: 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
+    GIT_ASKPASS: /dev/null
