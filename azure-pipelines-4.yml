@@ -7,9 +7,9 @@ pool:
 steps:
 - script: |
     git config --global user.email "Shailendra.Bilar@kyndryl.com"
-    git config --global user.name "Shailendra Bilar"
-    git pull https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/ADO TESTING 1 master
-    git push -u https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/ADO TESTING 1 HEAD:master
+    git config --global user.name "Shailendra.Bilar"
+    git pull https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/https://dev.azure.com/Kyndryl-Sandbox/ADO%20TESTING/_git/ADO%20TESTING%201 master
+    git push -u https://dev.azure.com/Kyndryl-Sandbox/ADO TESTING/_git/https://dev.azure.com/Kyndryl-Sandbox/ADO%20TESTING/_git/ADO%20TESTING%201 HEAD:master
   displayName: 'Sync changes with Azure DevOps'
 
 - task: UsePythonVersion@0
